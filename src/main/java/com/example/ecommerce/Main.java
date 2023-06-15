@@ -33,9 +33,11 @@ public class Main {
             showShoppingCart(cartList);
             showProductsInStock(ecommerceApp.getProductList());
 
-            delay(INITIAL_DELAY_SECONDS);
+            delay();
+
         }
         System.out.println("The cart is empty");
+        System.exit(0);
     }
     private static void showShoppingCart(List<Cart> cartList) {
         cartList.forEach(cart -> System.out.println(" Cart Id --> " + cart.getId() + " || Product List --> " + cart.getCartItem().toString()));
@@ -45,9 +47,9 @@ public class Main {
         productList.forEach(product -> System.out.println("Product description --> " + product.getDescription() + " || In Stock --> " + product.getQuantityInStock()));
     }
 
-    private static void delay(int seconds) {
+    private static void delay() {
         try {
-            Thread.sleep(seconds * 1000);
+            Thread.sleep((long) INITIAL_DELAY_SECONDS * 1000);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
             e.printStackTrace();
