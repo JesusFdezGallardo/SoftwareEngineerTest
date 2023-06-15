@@ -3,6 +3,7 @@ package com.example.ecommerce.models;
 import com.example.ecommerce.exceptions.EcommerceAppException;
 import com.example.ecommerce.interfaces.CartOperations;
 import com.example.ecommerce.utils.Utils;
+import jdk.jshell.execution.Util;
 
 import java.util.List;
 import java.util.Optional;
@@ -46,7 +47,7 @@ public class EcommerceApp implements CartOperations {
         Product product = getProductById(productId);
 
         if (product.getQuantityInStock() < quantity) {
-            throw new EcommerceAppException("Insufficient stock for product: " + product.getDescription());
+            throw new EcommerceAppException(Utils.ERROR_PRODUCT_NOT_STOCK + product.getDescription());
         }
 
         Optional<CartItem> optionalCartItem = getCartItemByProductId(cart, productId);
@@ -61,7 +62,7 @@ public class EcommerceApp implements CartOperations {
 
         product.decrementQuantityInStock(quantity);
 
-        System.out.println("Product added to the cart with id --> " + cart.getId());
+        System.out.println(Utils.NEW_PRODUCT + cart.getId());
     }
 
     /**

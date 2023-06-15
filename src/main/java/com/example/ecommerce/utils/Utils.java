@@ -8,9 +8,10 @@ import java.util.List;
 
 
 public class Utils {
-    public static String ERROR_CART_NOT_FOUND = "Cart with the specified ID was not found.";
-    public static String ERROR_PRODUCT_NOT_FOUND = "Product with the specified ID was not found.";
-    public static String ERROR_PRODUCT_NOT_STOCK = "Insufficient stock for product: ";
+    public static final String NEW_PRODUCT = "Product added to the cart with id --> ";
+    public static final String ERROR_CART_NOT_FOUND = "Cart with the specified ID was not found.";
+    public static final  String ERROR_PRODUCT_NOT_FOUND = "Product with the specified ID was not found.";
+    public static final String ERROR_PRODUCT_NOT_STOCK = "Insufficient stock for product: ";
     /**
      * Method to create an empty ArrayList or to be able to add generic shopping carts
      *
