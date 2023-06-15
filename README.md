@@ -5,8 +5,7 @@ It is a simple e-commerce that should be able to
 
 ● Create a cart (which will hold products).
 ● Get a cart information given its id.
-● Add one or more products to that cart. A product consists of
-the following properties:
+● Add one or more products to that cart. A product consists of the following properties:
 ○ Id (numerical)
 ○ Description (alphanumerical)
 ○ Amount (numerical)
